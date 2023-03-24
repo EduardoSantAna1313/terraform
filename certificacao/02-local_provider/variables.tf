@@ -1,0 +1,3 @@
+variable "path" {
+  default = "bla"
+}
