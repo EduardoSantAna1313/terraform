@@ -1,0 +1,1 @@
+terraform import local_file.file file.txt
