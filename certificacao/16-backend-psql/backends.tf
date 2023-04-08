@@ -1,5 +1,6 @@
 terraform {
   backend "pg" {
-    conn_str = "postgres://psql:psql@localhost:5432/terraform_backend?sslmode=disable"
+    # passar a conn_str via terrform init
+    # conn_str = "postgres://psql:psql@localhost:5432/terraform_backend?sslmode=disable"
   }
 }

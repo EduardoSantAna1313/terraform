@@ -1,6 +1,7 @@
 docker-compose up -d
 
-terraform init
+terraform init \
+    -backend-config="conn_str=postgres://psql:psql@localhost:5432/terraform_backend?sslmode=disable"
 
 terraform apply -auto-approve
 
