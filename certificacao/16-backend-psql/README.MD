@@ -1,0 +1,1 @@
+Exemplo com um banco de dados postgres como backend para o state do terraform.
