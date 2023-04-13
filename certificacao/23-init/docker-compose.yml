@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  db:
+    container_name: pg_backend23
+    image: postgres
+    environment:
+      POSTGRES_USER: psql
+      POSTGRES_PASSWORD: psql
+      POSTGRES_DB: backend_23 # Database default para o backend
+    ports:
+      - "5432:5432"
+    networks:
+      - terraform-network
+
+networks:
+  terraform-network:
+    driver: bridge
