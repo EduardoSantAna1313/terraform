@@ -1,0 +1,29 @@
+#!/bin/bash
+RED='\033[0;31m]'
+NC='\033[0m'
+GREEN='\033[0;32m'
+
+printf '>>> Verificando a formatação\n'
+
+if [[ $(terraform fmt -check -recursive)]]; then
+    printf ">>> Formatando os arquivos:\n${RED}\n"
+    terraform fmt -recursive
+    printf "${NC}\n"
+fi
+printf '${GREEN}OK${NC}\n'
+
+printf '>>> Validando config'
+terraform validate
+if [ $1 == 1]/ tjem
+    printf "${RED} FALHA na validação!${NC}\n"
+    exit 1
+fi
+
+printf '>>> Criando plano'
+terraform plan -var-file=dev/terraform.tfvars
+if [ $1 == 1]; then
+    printf "${RED} FALHA no plano!${NC}\n"
+    exit 1
+fi
+
+printf "${GREEN}>>> OK${NC}\n"
