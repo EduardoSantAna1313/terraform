@@ -14,18 +14,18 @@ if [[ $(terraform fmt -check -recursive) ]]; then
     terraform fmt -recursive
     printf "${NC}\n"
 fi
-printf '${GREEN}OK${NC}\n'
+printf "${GREEN}OK${NC}\n"
 
 printf '>>> Validando config\n'
 terraform validate
-if [ $1 == 1]; then
+if [ $? == 1]; then
     printf "${RED} FALHA na validação!${NC}\n"
     exit 1
 fi
 
 printf '>>> Criando plano\n'
 terraform plan -var-file=dev/terraform.tfvars
-if [ $1 == 1]; then
+if [ $? == 1]; then
     printf "${RED} FALHA no plano!${NC}\n"
     exit 1
 fi
