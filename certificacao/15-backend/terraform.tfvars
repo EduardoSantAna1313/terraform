@@ -1,1 +1,1 @@
-bucket="terraform-states-132312312"
+bucket = "terraform-states-132312312"

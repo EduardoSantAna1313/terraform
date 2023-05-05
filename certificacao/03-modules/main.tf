@@ -3,9 +3,9 @@ module "constant_file" {
 }
 
 module "dynamic_file" {
-  source = "./modules/dynamic"
+  source    = "./modules/dynamic"
   file_name = "dynamicfile.txt"
-  content = file("./conteudo.json")
+  content   = file("./conteudo.json")
 }
 
 output "created" {

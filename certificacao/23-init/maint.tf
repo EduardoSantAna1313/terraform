@@ -7,10 +7,10 @@ terraform {
 }
 
 variable "file_name" {
-  
+
 }
 
 resource "local_file" "first" {
   filename = var.file_name
-  content = file("./docker-compose.yml")
+  content  = file("./docker-compose.yml")
 }

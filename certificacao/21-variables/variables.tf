@@ -1,5 +1,5 @@
 variable "firstname" {
-  default = "1.txt"  
+  default = "1.txt"
 }
 
 variable "secondname" {

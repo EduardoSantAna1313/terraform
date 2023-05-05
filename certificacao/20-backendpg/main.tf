@@ -9,5 +9,5 @@ terraform {
 
 resource "local_file" "secondback" {
   filename = "test.json"
-  content = "vla"
+  content  = "vla"
 }
