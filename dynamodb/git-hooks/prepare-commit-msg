@@ -3,6 +3,10 @@ RED='\033[0;31m]'
 NC='\033[0m'
 GREEN='\033[0;32m'
 
+printf '>>> Inicializando'
+
+terraform init
+
 printf '>>> Verificando a formatação\n'
 
 if [[ $(terraform fmt -check -recursive) ]]; then
