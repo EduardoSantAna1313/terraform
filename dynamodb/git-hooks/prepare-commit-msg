@@ -18,6 +18,7 @@ printf "${GREEN}OK${NC}\n"
 
 printf '>>> Validando config\n'
 terraform validate
+
 if [ $? == 1]; then
     printf "${RED} FALHA na validação!${NC}\n"
     exit 1
