@@ -18,8 +18,8 @@ fi
 printf "${GREEN}OK${NC}\n"
 
 printf '>>> Validando config\n'
-terraform validate
 
+terraform validate
 if [ $? == 1]; then
     printf "${RED}FALHA na validação!${NC}\n"
     exit 1
@@ -27,7 +27,6 @@ fi
 
 printf '>>> Criando plano\n'
 terraform plan -var-file=dev/terraform.tfvars
-
 if [ $? == 1]; then
     printf "${RED}FALHA no plano!${NC}\n"
     exit 1
