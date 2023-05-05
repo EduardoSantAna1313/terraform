@@ -5,9 +5,8 @@ GREEN='\033[0;32m'
 
 cd dynamodb/
 
-printf '>>> Inicializando terraform\n'
-
-terraform init
+# printf '>>> Inicializando terraform\n'
+# terraform init
 
 printf '>>> Verificando a formatação\n'
 
@@ -30,7 +29,7 @@ printf '>>> Criando plano\n'
 terraform plan -var-file=dev/terraform.tfvars
 
 if [ $? == 1]; then
-    printf "${RED} FALHA no plano!${NC}\n"
+    printf "${RED}FALHA no plano!${NC}\n"
     exit 1
 fi
 

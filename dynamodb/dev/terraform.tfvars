@@ -1,1 +1,1 @@
-billing_mode = "PAY_PER_REQUEST"
+billing_mode = "AAAAAAAAAPAY_PER_REQUEST"
