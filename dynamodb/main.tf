@@ -1,16 +1,16 @@
 resource "aws_dynamodb_table" "mytable" {
-    name = "MyTable"
-    hash_key = "id"
+  name     = "MyTable"
+  hash_key = "id"
 
-    billing_mode = var.billing_mode
+  billing_mode = var.billing_mode
 
-    attribute {
-      name = "id"
-      type = "S"
-    }
+  attribute {
+    name = "id"
+    type = "S"
+  }
 
-    tags = {
-        Name ="MyTable"
-        Terraform = "true"
-    }
+  tags = {
+    Name      = "MyTable"
+    Terraform = "true"
+  }
 }
